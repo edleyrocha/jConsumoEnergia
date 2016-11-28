@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="energiaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jar-file>energiaMysql.jar</jar-file>
+    <jar-file>energiaPostgresql.jar</jar-file>
+    
+    <class>br.ufmt.ic.posbd.energiamysql.entidade.Ambiente</class>
+    <class>br.ufmt.ic.posbd.energiamysql.entidade.Aparelho</class>
+    <class>br.ufmt.ic.posbd.energiamysql.entidade.Imovel</class>
+    <class>br.ufmt.ic.posbd.energiamysql.entidade.Movimentacao</class>
+    <class>br.ufmt.ic.posbd.energiapostgresql.entidade.Cidade</class>
+    <class>br.ufmt.ic.posbd.energiapostgresql.entidade.Endereco</class>
+    
+    <properties>
+      <property name="eclipselink.composite-unit" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
